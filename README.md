@@ -28,6 +28,17 @@ To start the server, run the run_app.bat batch script in the terminal:
 ./run_app.bat
 ``` 
 
-This script automates the necessary commands to set up the server, including go mod tidy to manage dependencies and go run main.go to launch the server.
+## Docker steps
 
+Step 1 : Build the Docker image using the following command (don't forget the . at the end, which indicates the current directory
+
+```
+docker build -t task-1 .
+```
+
+Step 2 : Once the image is successfully built, you can run the application inside a Docker container using the following command:
+
+```
+docker run -p 8000:8000 task-1
+```
 Happy coding!
